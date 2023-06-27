@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" Class Square that defines a square by
-    Private instance attribute: size
+""" Class Square that defines a square
 """
 
 
@@ -17,6 +16,11 @@ class Square():
     def area(self):
         return self.__size ** 2
 
+    """getter size"""
+    @property
+    def size(self):
+        return self.__size
+
     """setter size"""
     @size.setter
     def size(self, size):
@@ -25,8 +29,3 @@ class Square():
         if size < 0:
             raise ValueError('size must be >= 0')
         self.__size = size
-
-    """getter size"""
-    @property
-    def size(self):
-        return self.__size
