@@ -66,3 +66,7 @@ class Rectangle:
             if col != self.height - 1:
                 to_print += '\n'
         return to_print
+
+    def __repr__(self):
+        """ Return a string representation of the rectangle """
+        return 'Rectangle({}, {})'.format(self.width, self.height)

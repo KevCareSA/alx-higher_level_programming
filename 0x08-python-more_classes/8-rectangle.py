@@ -16,6 +16,11 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    @classmethod
+    def square(cls, size=0):
+        """ Create new Rectangle instance with width == height == size """
+        return cls(size, size)
+
     @property
     def width(self):
         """ Get/set for width

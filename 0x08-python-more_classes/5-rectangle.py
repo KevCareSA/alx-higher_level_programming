@@ -7,9 +7,11 @@ class Rectangle:
     Defined class Rectangle
     """
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
-        """ Initialization of rect and args
-        """
+        """ Initialization of rect and args """
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -71,4 +73,5 @@ class Rectangle:
 
     def __del__(self):
         """ Deconstructor method """
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")

@@ -27,8 +27,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """ Get/set for width
-        """
+        """ setter width property """
         if not isinstance(value, int):
             raise TypeError('width must be an integer')
         if value < 0:
@@ -37,8 +36,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """ Get/set for height
-        """
+        """ setter height property """
         if not isinstance(value, int):
             raise TypeError('height must be an integer')
         if value < 0:
@@ -70,3 +68,7 @@ class Rectangle:
     def __repr__(self):
         """ Return a string representation of the rectangle """
         return 'Rectangle({}, {})'.format(self.width, self.height)
+
+    def __del__(self):
+        """ Deconstructor method """
+        print("Bye rectangle...")
