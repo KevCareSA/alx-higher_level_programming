@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''a function that returns a list of lists of integers representing the Pascal triangle
+'''function that returns a lists of integers representing the Pascal triangle
 '''
 
 
@@ -19,7 +19,7 @@ def pascal_triangle(n):
     for term in range(3, n + 1):
         temp = []
         last_term = triangle[-1]
-        for i in range(len(last_term)- 1):
+        for i in range(len(last_term) - 1):
             sum_ = last_term[i] + last_term[i + 1]
             temp.append(sum_)
         temp.insert(0, 1)
